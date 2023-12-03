@@ -20,11 +20,12 @@ This will be a significant feature in classifying the parasitized cell images fr
 
 # Data Pre-processing
 
-> The parasitized and uninfected data are resized and labelled as 0 for parasitized and 1 for uninfected individually while reading the images. The images and labels are stored in two different variables and are converted into a numpy array. 
-> The images are usually 2 dimensional with 1 or 3 colour channels. Here, the shape of the ima ge data is (27558, 150, 200, 3). The image data is normalized and converted into float in ord er to scale the values between 0 to 1 by dividing each pixel with 255(The maximum value of each pixel). 
-> Since the label data is integer value one-hot encoding is performed to convert th e data to categorical value using to_categorical function from tensorflow.keras. 
+ The parasitized and uninfected data are resized and labelled as 0 for parasitized and 1 for uninfected individually while reading the images. The images and labels are stored in two different variables and are converted into a numpy array. 
+ The images are usually 2 dimensional with 1 or 3 colour channels. Here, the shape of the ima ge data is (27558, 150, 200, 3). 
+ The image data is normalized and converted into float in ord er to scale the values between 0 to 1 by dividing each pixel with 255(The maximum value of each pixel). 
+ Since the label data is integer value one-hot encoding is performed to convert th e data to categorical value using to_categorical function from tensorflow.keras. 
 Once the image data is converted into array. 
-> The data is split into testing and training data in 80:20 ratio respectively using the function train_test_split from sklearn.model_selection.  
+ The data is split into testing and training data in 80:20 ratio respectively using the function train_test_split from sklearn.model_selection.  
 
 # Model building and Comparision
 
@@ -39,12 +40,12 @@ From the above table, it is clear that the predictions made by Convolution Neura
 
 # Findings
 
->	The accuracy of the CNN model is 0.95 when only four convolution layers are used. 
+	The accuracy of the CNN model is 0.95 when only four convolution layers are used. 
 When the number of convolution layers are increased higher accuracy can be achieved 
->	The implementation of larger datasets is much easier compared to other models though the training is a time consuming process. 
->	The SVM model can handle large dimensional inputs which is not in the case of multilayer perceptron. 
->	The performance of the SVM can be improved by adding more number of layers and applying regularization techniques like Dropout, maxpooling 
->	The input of multi-layer perceptron is a giant one-dimensional vector which results in too many parameters to train. The performance of MLP with smaller datasets will result in good predictions. 
+	The implementation of larger datasets is much easier compared to other models though the training is a time consuming process. 
+	The SVM model can handle large dimensional inputs which is not in the case of multilayer perceptron. 
+	The performance of the SVM can be improved by adding more number of layers and applying regularization techniques like Dropout, maxpooling 
+	The input of multi-layer perceptron is a giant one-dimensional vector which results in too many parameters to train. The performance of MLP with smaller datasets will result in good predictions. 
 
 # Conclusion
 
